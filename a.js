@@ -182,9 +182,9 @@ var a = (m, n) => {
   else if (m == 2) return 2 * n + 3
   else if (m == 3) return Math.pow(2, n + 3) - 3
   else if (m == 4) {
+    // does not work at the moment, use direct exponent to calculate
     var bn = new BigNum(16)
     var num2 = new BigNum(2)
-    console.log("starting")
     for (var i = 0; i < n; i++) {
       bn = num2.pow(bn)
     }
@@ -200,7 +200,11 @@ var printBN = (bn) => {
   })
 }
 
-printBN(a(4, 0)) // 13
-printBN(a(4, 1)) // 65533
-printBN(a(4, 2)) // huge number
-printBN(a(4, 3)) // impossibru
+//printBN(a(4, 0)) // 13
+//printBN(a(4, 1)) // 65533
+//printBN(a(4, 2)) // huge number
+//printBN(a(4, 3)) // impossibru
+
+
+printBN(new BigNum(2).pow(new BigNum(65536)))
+//printBN(new BigNum(2).pow(new BigNum(2).pow(new BigNum(65536))))
