@@ -206,5 +206,5 @@ var printBN = (bn) => {
 //printBN(a(4, 3)) // impossibru
 
 
-printBN(new BigNum(2).pow(new BigNum(65536)))
+printBN(new BigNum(2).pow(new BigNum(65536)).sub1().sub1().sub1())
 //printBN(new BigNum(2).pow(new BigNum(2).pow(new BigNum(65536))))
